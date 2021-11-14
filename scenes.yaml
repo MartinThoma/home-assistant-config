@@ -1,0 +1,209 @@
+- id: '1636308914353'
+  name: Movie Night
+  entities:
+    light.wohnzimmer:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - brightness
+      - color_temp
+      - onoff
+      color_mode: color_temp
+      brightness: 255
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 136
+      - 13
+      xy_color:
+      - 0.599
+      - 0.382
+      friendly_name: Wohnzimmer
+      supported_features: 0
+      state: 'on'
+    light.eingang:
+      min_mireds: 140
+      max_mireds: 650
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 28
+      color_temp: 650
+      hs_color:
+      - 26.057
+      - 100
+      rgb_color:
+      - 255
+      - 110
+      - 0
+      xy_color:
+      - 0.633
+      - 0.357
+      is_deconz_group: false
+      friendly_name: Light Entrance
+      supported_features: 40
+      state: 'on'
+  icon: hass:movie
+- id: '1636309235014'
+  name: Alle Lampen aus
+  entities:
+    light.eingang_2:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      is_deconz_group: true
+      all_on: false
+      friendly_name: Eingang
+      supported_features: 40
+      state: 'off'
+    light.wohnzimmer:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - brightness
+      - color_temp
+      - onoff
+      friendly_name: Wohnzimmer
+      supported_features: 0
+      state: 'off'
+    light.schlafzimmer:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - brightness
+      - color_temp
+      - onoff
+      friendly_name: Schlafzimmer
+      supported_features: 0
+      state: 'off'
+  icon: hass:sleep
+- id: '1636309255604'
+  name: Alle Lampen an
+  entities:
+    light.schlafzimmer:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - brightness
+      - color_temp
+      - onoff
+      color_mode: color_temp
+      brightness: 255
+      color_temp: 327.19399999999996
+      hs_color:
+      - 27.736
+      - 55.395
+      rgb_color:
+      - 255
+      - 179
+      - 113
+      xy_color:
+      - 0.491
+      - 0.383
+      friendly_name: Schlafzimmer
+      supported_features: 0
+      state: 'on'
+    light.eingang_2:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp: 320
+      hs_color:
+      - 27.631
+      - 53.602
+      rgb_color:
+      - 255
+      - 181
+      - 118
+      xy_color:
+      - 0.485
+      - 0.381
+      is_deconz_group: true
+      all_on: true
+      friendly_name: Eingang
+      supported_features: 40
+      state: 'on'
+    light.wohnzimmer:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - brightness
+      - color_temp
+      - onoff
+      color_mode: color_temp
+      brightness: 255
+      color_temp: 321.29499999999996
+      hs_color:
+      - 27.65
+      - 53.935
+      rgb_color:
+      - 255
+      - 180
+      - 117
+      xy_color:
+      - 0.487
+      - 0.381
+      friendly_name: Wohnzimmer
+      supported_features: 0
+      state: 'on'
+  icon: hass:lightbulb
+- id: '1636575152297'
+  name: Frühdienst
+  entities:
+    light.wohnzimmer:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - brightness
+      - color_temp
+      - onoff
+      color_mode: color_temp
+      brightness: 255
+      color_temp: 395.206
+      hs_color:
+      - 28.796
+      - 71.447
+      rgb_color:
+      - 255
+      - 160
+      - 72
+      xy_color:
+      - 0.544
+      - 0.389
+      friendly_name: Wohnzimmer
+      supported_features: 0
+      state: 'on'
+    light.eingang_2:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp: 320
+      hs_color:
+      - 27.631
+      - 53.602
+      rgb_color:
+      - 255
+      - 181
+      - 118
+      xy_color:
+      - 0.485
+      - 0.381
+      is_deconz_group: true
+      all_on: true
+      friendly_name: Eingang
+      supported_features: 40
+      state: 'on'

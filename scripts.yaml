@@ -1,0 +1,5 @@
+doorbell:
+  alias: Doorbell
+  sequence:
+  - service: script.doorbell
+  mode: single

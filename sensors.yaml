@@ -1,0 +1,17 @@
+- platform: template
+  sensors:
+    temperature_bathroom:
+      friendly_name: 'Bathroom Temperature'
+      value_template: "{{state_attr('climate.heizung_bad', 'current_temperature')}}"
+      unit_of_measurement: °C
+    temperature_outside:
+      friendly_name: "Outside Temperature"
+      value_template: "{{state_attr('weather.home', 'temperature')}}"
+      unit_of_measurement: °C
+- platform: history_stats
+  name: Martin at home
+  entity_id: device_tracker.martin_s10
+  state: 'home'
+  type: time
+  start: '{{ as_timestamp( now().replace(hour=0).replace(minute=0).replace(second=0) ) - now().weekday() * 86400 }}'
+  end: '{{ now() }}'

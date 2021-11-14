@@ -1,0 +1,91 @@
+- id: '1635443246868'
+  alias: Turn off the lights when I go in the morning
+  description: ''
+  trigger:
+  - type: not_opened
+    platform: device
+    device_id: 9f1c18dfee576a465df2b9a223101e1a
+    entity_id: binary_sensor.openclose_2
+    domain: binary_sensor
+  condition:
+  - condition: device
+    type: is_on
+    device_id: 1ae987c82966dd5a3054d835b1a3f75b
+    entity_id: light.eingang
+    domain: light
+  - condition: time
+    after: 04:00:00
+    before: 08:00:00
+  action:
+  - scene: scene.away_from_home
+  mode: single
+- id: '1635443381013'
+  alias: Turn off the lights when the sun rises
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunrise
+  condition: []
+  action:
+  - scene: scene.away_from_home
+  mode: single
+- id: '1635454992928'
+  alias: Front Door Opened and no light was on when it was dark
+  description: ''
+  trigger:
+  - type: opened
+    platform: device
+    device_id: 9f1c18dfee576a465df2b9a223101e1a
+    entity_id: binary_sensor.openclose_2
+    domain: binary_sensor
+  condition:
+  - condition: device
+    type: is_off
+    device_id: 535c1cbcdb2e76be977d4193afacf36f
+    entity_id: light.eingang_2
+    domain: light
+  - condition: device
+    type: is_off
+    device_id: ae1840ad95c74ae708f75c5286eb3246
+    entity_id: light.wohnzimmer
+    domain: light
+  - condition: time
+    after: '21:00:00'
+    before: 07:00:00
+  action:
+  - type: turn_on
+    device_id: 1ae987c82966dd5a3054d835b1a3f75b
+    entity_id: light.eingang
+    domain: light
+  - type: turn_on
+    device_id: ae1840ad95c74ae708f75c5286eb3246
+    entity_id: light.wohnzimmer
+    domain: light
+  mode: single
+- id: '1635455114746'
+  alias: Mega left home
+  description: ''
+  trigger:
+  - platform: device
+    device_id: efe7cdaf2c50e4bf2955a1b026f11a0f
+    domain: device_tracker
+    entity_id: device_tracker.mega_iphone
+    type: enters
+    zone: zone.home
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 1ae987c82966dd5a3054d835b1a3f75b
+    entity_id: light.eingang
+    domain: light
+  mode: single
+- id: '1636575275596'
+  alias: New Automation
+  description: ''
+  trigger:
+  - platform: time
+    at: 05:20:00
+  condition: []
+  action:
+  - scene: scene.fruhdienst
+  mode: single
